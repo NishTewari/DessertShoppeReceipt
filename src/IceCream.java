@@ -6,7 +6,7 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author tewan2657
  */
 public class IceCream {
 
@@ -16,8 +16,8 @@ public class IceCream {
     }
 
   
-    public String toString()
-    {
+    public String toString(){
+        return null;
      
        
     }

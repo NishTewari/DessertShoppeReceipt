@@ -6,7 +6,7 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author tewan2657
  */
 public class Candy {
     
@@ -20,6 +20,7 @@ public class Candy {
     
     public String toString()
     {
+        return null;
        
     }
 }

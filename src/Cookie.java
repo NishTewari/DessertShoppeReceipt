@@ -6,7 +6,7 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author tewan2657
  */
 public class Cookie {
     
@@ -17,8 +17,8 @@ public class Cookie {
     }
 
     
-    public String toString()
-    {
+    public String toString() {
+        return null;
         
     }
     
