@@ -8,19 +8,17 @@
  *
  * @author tewan2657
  */
-public class Sundae{
+public class Sundae {
+    //Instance Variables
     
-
     
-    public Sundae(String icName, int icCost, String toppingName, int toppingCost)
-    {
+    public Sundae(String icName, int icCost, String toppingName, int toppingCost){
        
     }
     
 
     
-    public String toString()
-    {
+    public String toString(){
         return null;
         
     }

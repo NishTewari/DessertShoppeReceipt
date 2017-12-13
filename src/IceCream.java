@@ -8,18 +8,27 @@
  *
  * @author tewan2657
  */
-public class IceCream {
+public class IceCream extends DessertItem {
+    //Instance Variables
+    //Stores the name of the iceCream(Ex.Chocolate,Vanilla)
+     private String icName;
+    //Stores the cost of the ice cream 
+    private int icCost;
 
-    public IceCream(String name, int cost)
-    {
+    public IceCream(String name, int cost) {
+        this.icName = name;
+        this.icCost = cost;
+    }
+
+    public String toString() {
         
+        return null;
+
+
     }
 
-  
-    public String toString(){
-        return null;
-     
-       
+    @Override
+    public int getCost() {
+        return icCost;
     }
-    
 }
