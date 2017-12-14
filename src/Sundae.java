@@ -17,7 +17,7 @@ public class Sundae extends IceCream {
     private int toppingCost;
 
     /**
-     *
+     * Constructor to initialize the instance variables 
      * @param icName name of the ice Cream
      * @param icCost cost of the ice Cream
      * @param toppingName name of the topping
@@ -33,16 +33,16 @@ public class Sundae extends IceCream {
     }
 
     /**
-     *
-     * @return
+     * a method to get the topping name 
+     * @return the topping name 
      */
     public String getTName() {
         return toppingName;
     }
 
     /**
-     * 
-     * @return 
+     *  a method to get the topping cost 
+     * @return the topping cost
      */
     public int getToppingCost() {
         return toppingCost;

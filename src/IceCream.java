@@ -13,6 +13,11 @@ public class IceCream extends DessertItem {
     //Stores the cost of the ice cream 
     private int icCost;
 
+    /**
+     * Constructor to initialize the instance variables
+     * @param name the name of the ice cream
+     * @param cost  the cost of the ice cream
+     */
     public IceCream(String name, int cost) {
         super(name);
         this.icCost = cost;

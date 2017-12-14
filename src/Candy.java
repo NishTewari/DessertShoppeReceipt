@@ -16,6 +16,12 @@ public class Candy extends DessertItem {
     //Stores the price per pounds of the candy
     private int pricePerLbs;
 
+    /**
+     * Constructor to initialize the instance variables
+     * @param name the name of the candy 
+     * @param weight the weight of the candy 
+     * @param pricePerLbs the price per pounds of the candy   
+     */
     public Candy(String name, double weight, int pricePerLbs) {
         super(name);
         this.candyWeight = weight;

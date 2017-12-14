@@ -32,7 +32,10 @@ public class Cookie extends DessertItem {
     }
 
     public String toString() {
-        return null;
+        String output = "";
+        output += this.pricePerDoz + "\n";
+        output += this.getName() + "\n";
+        return output;
 
     }
 
@@ -44,9 +47,14 @@ public class Cookie extends DessertItem {
         return numOfCookie;
     }
 
+    /**
+     * a method to calculate the total of the cookies 
+     * @return cost
+     */
     @Override
     public int getCost() {
-        return pricePerDoz;
+       int cost = (this.numOfCookie / 12) * this.pricePerDoz;
+       return cost;
     }
 
 }
