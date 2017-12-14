@@ -9,34 +9,47 @@
  * @author tewan2657
  */
 public class Candy extends DessertItem {
+
     //Instance Variables
-    //Stores the name of the candy 
-    private String candyName;
     //Stores the weight of the candy 
     private double candyWeight;
     //Stores the price per pounds of the candy
     private int pricePerLbs;
-    
-    
-    
-    public Candy(String name, double weight, int pricePerLbs){
-        this.candyName = name;
+
+    public Candy(String name, double weight, int pricePerLbs) {
+        super(name);
         this.candyWeight = weight;
         this.pricePerLbs = pricePerLbs;
-        
 
     }
 
- 
-    
-    public String toString()
-    {
+    public String toString() {
         return null;
-       
     }
 
+    /**
+     * a method to get the weight of the candy
+     * @return the candy weight
+     */
+    public double getWeight() {
+        return candyWeight;
+
+    }
+
+    /**
+     * a method to get the price per pound of candy 
+     * @return the price per pound
+     */
+    public int getpricePerLbs() {
+        return pricePerLbs;
+    }
+
+    /**
+     * a method to calculate the total cost of candy 
+     * @return 
+     */
     @Override
     public int getCost() {
-       return pricePerLbs;
+        return pricePerLbs;
     }
 }
