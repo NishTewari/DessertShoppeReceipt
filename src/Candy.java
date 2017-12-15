@@ -18,9 +18,10 @@ public class Candy extends DessertItem {
 
     /**
      * Constructor to initialize the instance variables
-     * @param name the name of the candy 
-     * @param weight the weight of the candy 
-     * @param pricePerLbs the price per pounds of the candy   
+     *
+     * @param name the name of the candy
+     * @param weight the weight of the candy
+     * @param pricePerLbs the price per pounds of the candy
      */
     public Candy(String name, double weight, int pricePerLbs) {
         super(name);
@@ -30,7 +31,16 @@ public class Candy extends DessertItem {
     }
 
     public String toString() {
-        return null;
+        //Converts the cost of the candy 
+        String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        //calculate the amount of spaces
+        int numOfSpace = 30 - this.getName().length() - output.length();
+        //keep adding space according to the number of spaces left.
+        for (int i = 0 ; i < numOfSpace; i++) {
+           output = " " + output; 
+        }
+        return this.candyWeight + " lbs. " + "@ $" + this.pricePerLbs + "/lb. \n" 
+                + this.getName() + output;
     }
 
     /**
@@ -43,7 +53,7 @@ public class Candy extends DessertItem {
     }
 
     /**
-     * a method to get the price per pound of candy 
+     * a method to get the price per pound of candy
      * @return the price per pound
      */
     public int getpricePerLbs() {
@@ -51,11 +61,13 @@ public class Candy extends DessertItem {
     }
 
     /**
-     * a method to calculate the total cost of candy 
-     * @return 
+     * a method to calculate the total cost of candy
+     * @return temp round the double to an integer
      */
     @Override
     public int getCost() {
-        return pricePerLbs;
+        double count = candyWeight * pricePerLbs;
+        int temp = (int) Math.round(count);
+        return temp;
     }
 }

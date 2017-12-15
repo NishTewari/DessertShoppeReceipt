@@ -32,7 +32,7 @@ public class Cookie extends DessertItem {
     }
 
     public String toString() {
-        String output = "";
+        String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
         output += this.pricePerDoz + "\n";
         output += this.getName() + "\n";
         return output;
