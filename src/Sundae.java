@@ -17,7 +17,8 @@ public class Sundae extends IceCream {
     private int toppingCost;
 
     /**
-     * Constructor to initialize the instance variables 
+     * Constructor to initialize the instance variables
+     *
      * @param icName name of the ice Cream
      * @param icCost cost of the ice Cream
      * @param toppingName name of the topping
@@ -25,6 +26,7 @@ public class Sundae extends IceCream {
      */
     public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
 
+        //Gets the name and cost from the super class(IceCream)
         super(icName, icCost);
 
         //initializes both the topping cost and name
@@ -33,21 +35,25 @@ public class Sundae extends IceCream {
     }
 
     /**
-     * a method to get the topping name 
-     * @return the topping name 
+     * a method to get the topping name
+     * @return the topping name
      */
     public String getTName() {
         return toppingName;
     }
 
     /**
-     *  a method to get the topping cost 
+     * a method to get the topping cost
      * @return the topping cost
      */
     public int getToppingCost() {
         return toppingCost;
     }
 
+    /**
+     * A method that returns the string drawing of the object 
+     * @return the topping name, name of ice cream and cost
+     */
     public String toString() {
         //Converts the cost of the candy 
         String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
@@ -56,10 +62,8 @@ public class Sundae extends IceCream {
         //for loop to print out the extact number of spaces needed
         for (int i = 0; i < numOfSpaces; i++) {
             output = " " + output;
-            
         }
-       
-        return this.toppingName + " Sundae with\n" + this.getName() + output ;
+        return this.toppingName + " Sundae with\n" + this.getName() + output;
     }
 
 }

@@ -24,12 +24,18 @@ public class Candy extends DessertItem {
      * @param pricePerLbs the price per pounds of the candy
      */
     public Candy(String name, double weight, int pricePerLbs) {
+        //Gets the name from the super class(DessertItem)
         super(name);
+        //Initializes the candy weight
         this.candyWeight = weight;
+        //initializes the price per pounds of the candy 
         this.pricePerLbs = pricePerLbs;
-
     }
 
+    /**
+     * A method that returns the string drawing of the object.
+     * @return the name, the weight, price per pounds and cost of the candy 
+     */
     public String toString() {
         //Converts the cost of the candy 
         String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
@@ -39,7 +45,7 @@ public class Candy extends DessertItem {
         for (int i = 0 ; i < numOfSpace; i++) {
            output = " " + output; 
         }
-        return this.candyWeight + " lbs. " + "@ $" + this.pricePerLbs + " /lb. \n" 
+        return this.candyWeight + " lbs. " + "@ $" + this.pricePerLbs*0.01 + " /lb. \n" 
                 + this.getName() + output;
     }
 

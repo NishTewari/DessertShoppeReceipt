@@ -23,6 +23,7 @@ public class Cookie extends DessertItem {
      * @param pricePer12 the price for each dozen of cookies
      */
     public Cookie(String name, int number, int pricePer12) {
+        //Gets the name from the super class(DessertItem)
         super(name);
         //initialize the number of cookies
         this.numOfCookie = number;
@@ -30,7 +31,10 @@ public class Cookie extends DessertItem {
         this.pricePerDoz = pricePer12;
 
     }
-
+    /**
+     * A method that returns the string drawing of the object
+     * @return the name, the amount, price per dozen and cost of the cookies
+     */
     public String toString() {
         //Converts the cost of the cookie 
         String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
@@ -40,7 +44,7 @@ public class Cookie extends DessertItem {
         for (int i = 0; i < numOfSpaces; i++) {
             output = " " + output;
         }
-        return this.numOfCookie + " @ $" + this.pricePerDoz + " /dz\n"
+        return this.numOfCookie + " @ $" + (this.pricePerDoz*0.01) + " /dz\n"
                 + this.getName() + output;
 
     }

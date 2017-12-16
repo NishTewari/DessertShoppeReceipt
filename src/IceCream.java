@@ -19,13 +19,14 @@ public class IceCream extends DessertItem {
      * @param cost  the cost of the ice cream
      */
     public IceCream(String name, int cost) {
+        //Gets the name from the super class (DessertItem)
         super(name);
         this.icCost = cost;
     }
 
     /**
-     * 
-     * @return 
+     * A method that returns the string drawing of the object. 
+     * @return the name of the ice cream and cost of the ice cream.
      */
     public String toString() { 
         //Converts the cost of the iceCream
