@@ -32,10 +32,16 @@ public class Cookie extends DessertItem {
     }
 
     public String toString() {
+        //Converts the cost of the cookie 
         String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
-        output += this.pricePerDoz + "\n";
-        output += this.getName() + "\n";
-        return output;
+        //Calculate the amount of spaces left over
+        int numOfSpaces = 30 - this.getName().length() - output.length();
+        //Keep adding space according to the number of spaces left
+        for (int i = 0; i < numOfSpaces; i++) {
+            output = " " + output;
+        }
+        return this.numOfCookie + " @ $" + this.pricePerDoz + " /dz\n"
+                + this.getName() + output;
 
     }
 
@@ -48,12 +54,12 @@ public class Cookie extends DessertItem {
     }
 
     /**
-     * a method to calculate the total of the cookies 
+     * a method to calculate the total cost of the cookies 
      * @return cost
      */
     @Override
     public int getCost() {
-       int cost = (this.numOfCookie / 12) * this.pricePerDoz;
+       int cost = (this.numOfCookie * this.pricePerDoz) / 12;
        return cost;
     }
 

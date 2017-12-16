@@ -23,12 +23,28 @@ public class IceCream extends DessertItem {
         this.icCost = cost;
     }
 
-    public String toString() {  
-        return null;
+    /**
+     * 
+     * @return 
+     */
+    public String toString() { 
+        //Converts the cost of the iceCream
+        String output = DessertShoppe.cents2dollarsAndCents(this.icCost);
+        //Calculates the amount of spaces left over 
+        int numOfSpaces = 30 - this.getName().length() - output.length();
+        // keep addding space according to the number of spaces left
+        for (int i = 0; i < numOfSpaces; i++) {
+            output = " " + output;
+        }
+ 
+        return this.getName() + output;
     }
 
     
-    
+    /**
+     * a method to return the cost of ice cream
+     * @return the ice cream cost
+     */
     @Override
     public int getCost() {
         return icCost;

@@ -52,14 +52,14 @@ public class Sundae extends IceCream {
         //Converts the cost of the candy 
         String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
         //calculate the amount of spaces.
-        int numOfSpaces = 30 - this.getTName().length() - output.length();
+        int numOfSpaces = 30 - this.getName().length() - output.length();
         //for loop to print out the extact number of spaces needed
         for (int i = 0; i < numOfSpaces; i++) {
-            output = "," + output;
+            output = " " + output;
             
         }
-        
-        return null;
+       
+        return this.toppingName + " Sundae with\n" + this.getName() + output ;
     }
 
 }

@@ -14,7 +14,7 @@ public class TestShoppe {
     
     checkout.enterItem(new Candy("Peanut Butter Fudge", 2.25, 399));
     checkout.enterItem(new IceCream("Vanilla Ice Cream",105));
-    checkout.enterItem(new Sundae("Choc. Chip Ice Cream",145, "Hot Fudge", 50));
+    checkout.enterItem(new Sundae("Choc. Chip Ice Cream",195, "Hot Fudge", 50));
     checkout.enterItem(new Cookie("Oatmeal Raisin Cookies", 4, 399));
     
     System.out.println(checkout);

@@ -33,13 +33,13 @@ public class Candy extends DessertItem {
     public String toString() {
         //Converts the cost of the candy 
         String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
-        //calculate the amount of spaces
+        //calculate the amount of spaces left over
         int numOfSpace = 30 - this.getName().length() - output.length();
         //keep adding space according to the number of spaces left.
         for (int i = 0 ; i < numOfSpace; i++) {
            output = " " + output; 
         }
-        return this.candyWeight + " lbs. " + "@ $" + this.pricePerLbs + "/lb. \n" 
+        return this.candyWeight + " lbs. " + "@ $" + this.pricePerLbs + " /lb. \n" 
                 + this.getName() + output;
     }
 
